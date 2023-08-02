@@ -201,3 +201,38 @@ h1 {
     background-color: #84e712;
 }
 /*#endregion*/
+
+@media (max-width: 600px) {
+  /* Aqui estamos diminuindo o tamanho da fonte do título para dispositivos móveis */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  /* Ajustando a largura da borda da imagem para se ajustar melhor em dispositivos móveis */
+  .borda-imagem {
+    width: 300px;
+    height: 212.5px;
+  }
+
+  /* Ajustando o tamanho do placar */
+  .placar #vitorias, .placar #derrotas{
+    width: 130px;
+    font-size: 20px;
+  }
+
+  /* Ajustando a largura da barra de progresso */
+  .progresso {
+    width: 250px;
+  }
+
+  /* Ajustando o tamanho do input */
+  form {
+    width: 300px;
+  }
+
+  /* Ajustando o botão jogar novamente */
+  #jogarNovamente button {
+    width: 200px;
+    font-size: 0.8em;
+  }
+}
