@@ -68,7 +68,7 @@ const listPersonagens = [
         imagem:"./img/img_0017.jpg",
     },
     personagem0018 = {
-        nome: "ANITA",
+        nome: "ANITTA",
         imagem:"./img/img_0018.jpg",
     },
     personagem0019 = {
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         }
-    });    
+    });
 
     document.getElementById('btnJogarNovamente').addEventListener('click', reiniciarJogo);
 });
