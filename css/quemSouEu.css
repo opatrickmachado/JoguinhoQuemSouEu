@@ -203,15 +203,15 @@ h1 {
 /*#endregion*/
 
 @media (max-width: 600px) {
-  /* Aqui estamos diminuindo o tamanho da fonte do título para dispositivos móveis */
-  h1 {
-    font-size: 2.5em;
+  .borda-imagem {
+    width: 100%;
+    height: auto;
   }
 
-  /* Ajustando a largura da borda da imagem para se ajustar melhor em dispositivos móveis */
-  .borda-imagem {
-    width: 300px;
-    height: 212.5px;
+  .borda-imagem #imagem {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Assegura que a imagem cubra todo o espaço disponível */
   }
 
   /* Ajustando o tamanho do placar */
