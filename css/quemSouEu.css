@@ -203,36 +203,24 @@ h1 {
 /*#endregion*/
 
 @media (max-width: 600px) {
-  .borda-imagem {
-    width: 100%;
-    height: auto;
-  }
-
-  .borda-imagem #imagem {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Assegura que a imagem cubra todo o espaço disponível */
-  }
-
-  /* Ajustando o tamanho do placar */
-  .placar #vitorias, .placar #derrotas{
-    width: 130px;
-    font-size: 20px;
-  }
-
-  /* Ajustando a largura da barra de progresso */
-  .progresso {
-    width: 250px;
-  }
-
-  /* Ajustando o tamanho do input */
-  form {
-    width: 300px;
-  }
-
-  /* Ajustando o botão jogar novamente */
-  #jogarNovamente button {
-    width: 200px;
-    font-size: 0.8em;
-  }
+    /* Adicione aqui as regras CSS específicas para dispositivos móveis */
+    .container {
+        width: 100%;
+    }
+    .titulo {
+        font-size: 2em;
+    }
+    .placar {
+        flex-direction: column;
+    }
+    .placar #vitorias, .placar #derrotas {
+        width: 100%;
+        font-size: 1.5em;  /* ajusta o tamanho da fonte para ser menor em dispositivos móveis */
+    }
+    .borda-imagem {
+        width: 90%;
+    }
+    form {
+        width: 90%;
+    }
 }
