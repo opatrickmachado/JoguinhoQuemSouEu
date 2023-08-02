@@ -212,9 +212,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function inicializarJogo() {
         tentativas = 5;
+        atualizarProgresso(tentativas);
         SorteiaImagem();
         document.querySelector("#resposta").value = "";
         desfocarImagem(tentativas);
+    }
+
+    function atualizarProgresso(tentativasRestantes) {
+        for (let i = 1; i <= 5; i++) {
+            let progresso = document.getElementById(`progresso-0${i}`);
+            if (i <= tentativasRestantes) {
+                progresso.style.backgroundColor = '#f1f1f1'; // Cor quando há tentativas restantes
+            } else {
+                progresso.style.backgroundColor = '#8B0000'; // Cor após a tentativa
+            }
+        }
     }
 
     function reiniciarJogo() {
@@ -222,6 +234,7 @@ document.addEventListener("DOMContentLoaded", function() {
         derrotas = 0; // Reiniciando as derrotas
         document.getElementById('vitorias').textContent = `${vitorias}`; // Atualizando o placar de vitórias na página
         document.getElementById('derrotas').textContent = `${derrotas}`; // Atualizando o placar de derrotas na página
+        atualizarProgresso(tentativas);
         inicializarJogo();
     }
 
@@ -283,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 alert("Desculpe, você errou. Tente novamente!");
                 tentativas--;
+                atualizarProgresso(tentativas);
                 desfocarImagem(tentativas);
                 if (tentativas == 0) {
                     alert("Você perdeu todas as suas tentativas. O personagem era " + nomePersonagem);
